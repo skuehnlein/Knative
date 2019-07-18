@@ -21,7 +21,7 @@ public class SayHelloResource {
 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/")
+	@Path("/hello")
 	public String hello() {
 		return greetingService.sayHello("Hello: This is the resonsponse of: " + hostName);
 	}
