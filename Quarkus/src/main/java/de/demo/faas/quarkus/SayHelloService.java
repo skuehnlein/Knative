@@ -35,11 +35,11 @@ public class SayHelloService {
 
 	public String eventSayHello(String pKnativeEvent) {
 		count++;
-	    String hostname = String.format(RESPONSE_STRING_FORMAT, ""," Event ", HOSTNAME, count);
-	    JsonObject response = new JsonObject(pKnativeEvent)
-	                            .put("host", hostname.replace("\n", "").trim())
-	                            .put("time", SDF.format(new Date()));
-	    LOGGER.info("Event Message Received \n {}", response.encodePrettily());
+	    //String hostname = String.format(RESPONSE_STRING_FORMAT, ""," Event ", HOSTNAME, count);
+	    JsonObject response = new JsonObject(pKnativeEvent);
+//	                            .put("host", hostname.replace("\n", "").trim())
+//	                            .put("time", SDF.format(new Date()));
+	    LOGGER.info("Event Message Received \n {}", pKnativeEvent);
 	    return response.encode();
 	}
 
